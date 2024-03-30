@@ -1,0 +1,156 @@
+$bg: rgb(250, 248, 248);
+$gray: #c9c7c7;
+
+.hero{
+    width: 100%;
+    height: fit-content;
+    background: $bg;
+
+    @media screen and (max-width: 700px) {
+        background: #ff3300b0;
+    }
+
+    .carousel{
+        // background: #b0bbfa;
+        margin-right: 10rem;
+        padding: 2rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        .carousel_item_1{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            height: 490px;
+            position: relative;
+            // background: #c683f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .carousel_img{
+                padding: 0 20px 0 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+
+                img{
+                    width: 100%;
+                    z-index: 9;
+                }
+
+                &::before{
+                        content: '';
+                        position: absolute;
+                        width: 20rem;
+                        height: 20rem;
+                        background: linear-gradient(#37135a, #59268a);
+                        border-radius: 100%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        border: 5px solid #d1bae6;
+                    }
+
+            }
+
+            .carousel_item_text{
+                padding: 2rem 1rem 1rem 2rem;
+                white-space: normal;
+
+                #styled_text{
+                    font-size: 8rem;
+                    font-weight: bold;
+                    color: #f75313a9;
+                    text-shadow: 2rem -1.5rem #f0eeee;
+                }
+
+                p{
+                    font-size: 15px;
+                }
+            }
+
+            @media screen and (max-width: 1000px) {
+                .carousel_img{
+                    &::before{
+                        display: none;
+                    }
+
+                    img{
+                        width: 60rem;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 700px) {
+                grid-template-columns: 1fr;
+                height: fit-content;
+
+                .carousel_img{
+                    display: none;
+                }
+                
+                .carousel_item_text{
+                    #styled_text{
+                        font-size: 6rem;
+                        color: white;
+                        text-shadow: none;
+                    }
+
+                    p{
+                        width: 70%;
+                    }
+
+                    .size{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        // .carousel_item_2{
+        //     display: none;
+
+        //     @media screen and (max-width: 700px) {
+        //         display: block;
+        //     }
+        // }
+
+        .indicators{
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+
+            @media screen and (max-width: 700px) {
+                display: none;
+            }
+
+            #indicator_btn{
+                font-size: 20px;
+                position: relative;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 2px;
+                    height: 4rem;
+                    background: #b3b1b1;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, 30%);
+                }
+            }
+        }
+    }
+}

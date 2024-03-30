@@ -1,0 +1,108 @@
+.hmd{
+    font-size: 14px;
+}
+
+.btn{
+    outline: 0;
+    border: 2px solid orange;
+    border-radius: 5px;
+    padding: 3px 7px;
+    color: white;
+    font-size: 13px;
+}
+
+.header{
+    width: 100%;
+    padding: 1rem;
+    // position: fixed;
+    // left: 0;
+    // top: 0;
+    // z-index: 10;
+
+    .filter{
+        .search{
+            span{
+                margin-right: 10px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
+    }
+
+    .text_div{
+        margin-right: 17rem;
+
+        @media screen and (max-width: 1000px) {
+            margin: 0;
+        }
+
+        // @media screen and (max-width: 600px) {
+        //     display: none;
+        // }
+    }
+
+    .nav{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #0d0d41;
+        color: rgb(233, 233, 233);
+        width: 13rem;
+        padding: 2rem;
+        border-radius: 0 0 0 40%;
+        transition: 0.5s ease;
+
+        ul{
+            li{
+                margin-bottom: 2rem;
+                cursor: pointer;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            right: -100%;
+            position: fixed;
+            width: 50%;
+            height: 100%;
+            z-index: 99;
+            border-radius: 0;
+            background: #0d0d41;
+            padding-top: 3rem;
+
+            &.active{
+                right: 0;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            width: 100%;
+        }
+    }
+
+    .menuBtn{
+        display: none;
+        cursor: pointer;
+
+        @media screen and (max-width: 1000px) {
+            display: block;
+        }
+    }
+    .closeBtn{
+        display: none;
+        cursor: pointer;
+
+        @media screen and (max-width: 1000px) {
+            display: block;
+            font-size: 19px;
+            font-weight: bold;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        background: white;
+    }
+}
