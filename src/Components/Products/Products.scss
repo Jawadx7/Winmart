@@ -64,7 +64,11 @@
             gap: 1rem;
 
             .product_card{
-                margin-right: 2rem;
+                width: 10rem;
+
+                .img{
+                    height: 8rem;
+                }
             }
         }
     }
