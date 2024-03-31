@@ -31,5 +31,33 @@ export const Featured = [
         price: 90,
         delivery: 'paid delivery',
         img: tv
+    },
+    {
+        id: 5,
+        name: 'Brown Jacket',
+        price: 20,
+        delivery: 'free delivery',
+        img: jacket
+    },
+    {
+        id: 6,
+        name: 'Pinky Dress',
+        price: 30,
+        delivery: 'free delivery',
+        img: dress
+    },
+    {
+        id: 7,
+        name: 'Blue Jeans',
+        price: 30,
+        delivery: 'free delivery',
+        img: jeans
+    },
+    {
+        id: 8,
+        name: 'LED TV',
+        price: 90,
+        delivery: 'paid delivery',
+        img: tv
     }
 ]

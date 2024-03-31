@@ -1,5 +1,7 @@
 import './Products.scss'
-import ProductItem from './ProductItem'
+// import ProductItem from './ProductItem'
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 interface Prop{
     title: string,
@@ -13,12 +15,34 @@ interface Prop{
 }
 
 const ProductsList = ({title, items}: Prop) => {
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 1024 },
+      items: 4,
+      slidesToSlide: 3
+    },
+    desktop: {
+      breakpoint: { max: 1024, min: 800 },
+      items: 3,
+      slidesToSlide: 3
+    },
+    tablet: {
+      breakpoint: { max: 800, min: 464 },
+      items: 3,
+      slidesToSlide: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 2,
+      slidesToSlide: 1 
+    }
+  };
   return (
     <div className='products_container'>
       <p className='mb-3'>{title}</p>
-      <div className='product_list'>
-        {/* <ProductItem products={items}/> */}
-        {
+      <Carousel swipeable={true} draggable={true} showDots={false} responsive={responsive} className='product_list'>
+      {
           items?.map((item) => (
             <div className="product_card" key={item.id}>
               <div className="img"><img src={item.img} alt="" /></div>
@@ -34,7 +58,7 @@ const ProductsList = ({title, items}: Prop) => {
             </div>
           ))
         }
-      </div>
+      </Carousel>
     </div>
     )
 }

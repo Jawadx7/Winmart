@@ -5,6 +5,7 @@ import food from '../../asserts/restaurant 2.png'
 // import { showNav, closeNav } from './actions'
 import { CiSearch } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
+import { RiMenu4Fill } from "react-icons/ri";
 
 const Header = () => {
 
@@ -31,7 +32,7 @@ const Header = () => {
 
         <div className="search bg-gray-100 border-2 rounded-full flex justify-center align-center">
           <input type="text" placeholder='search' className="px-2 py-1 outline-none rounded-full bg-transparent hmd"/>
-          <span className='cursor-pointer'>+</span>
+          <span className='cursor-pointer'><CiSearch /></span>
         </div>
       </div>
 
@@ -61,14 +62,14 @@ const Header = () => {
         <div className="closeBtn" onClick={() => closeNav()}>x</div>
         <button className="btn mb-5">SIGN UP FREE</button>
         <ul className='text-right'>
-          <li className='flex align-center justify-end'><span>Food App</span> <img src={food} alt="" className='w-10 h-10' /></li>
+          <li className='flex align-center justify-end hover:text-orange-500'><span>Food App</span> <img src={food} alt="" className='w-10 h-10' /></li>
           <li>Accessories</li>
           <li>Laptops</li>
           <li>Watch</li>
         </ul>
       </div>
 
-      <div className="menuBtn" onClick={() => showNav()}>&#9776;</div>
+      <div className="menuBtn" onClick={() => showNav()}><RiMenu4Fill /></div>
     </div>
   )
 }

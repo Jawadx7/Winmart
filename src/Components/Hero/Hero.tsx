@@ -1,6 +1,8 @@
 import './Hero.scss'
 import Header from '../Header/Header'
 import pic1 from '../../asserts/monica.png'
+import pic2 from '../../asserts/monica2.png'
+import { CiShoppingCart } from "react-icons/ci";
 
 const Hero = () => {
 
@@ -9,7 +11,7 @@ const Hero = () => {
       <Header />
       <section className='carousel'>
         {/* className={"nav" + (navStatus === 'opened' ? 'active' : '')} */}
-        <div className="carousel_item_1">
+        <div className="carousel_item">
           <div>
           <div className="carousel_item_text">
             <h3 className='size'>DESIGN BY KING DAVID</h3>
@@ -34,24 +36,28 @@ const Hero = () => {
 
             <button className="border-none outline-none py-2 px-5 bg-orange-600 flex align-center space-x-5 text-white">
               <span>add to cart</span>
-              <span>&#9776;</span>
+              <span><CiShoppingCart /></span>
             </button>
+
+            {/* Indicators */}
+            <div className="indicators">
+              <span id='indicator_btn'>01</span>
+              <span id='indicator_btn'>02</span>
+              <span id='indicator_btn'>03</span>
+            </div>
           </div>
           </div>
           <div className="carousel_img">
-          <img src={pic1} alt=""/>
+            <img src={pic1} alt=""/>
+          </div>
+          <div className="carousel_img_2">
+            <img src={pic2} alt=""/>
           </div>
         </div>
 
         {/* <div className="carousel_item_2">
           <h1>hello</h1>
         </div> */}
-
-        <div className="indicators">
-          <span id='indicator_btn'>01</span>
-          <span id='indicator_btn'>02</span>
-          <span id='indicator_btn'>03</span>
-          </div>
       </section>
     </div>
   )
