@@ -1,8 +1,18 @@
-import React from 'react'
+import './Products.scss'
+import jeans from '../../asserts/jeans.png'
+
+interface Props{
+}
 
 const ProductItem = () => {
   return (
-    <div>ProductItem</div>
+    <div className='product_card'>
+        {/* {products.map((item: any) => (
+          <ul key={item.id}>
+            <li>{item.name}</li>
+          </ul>
+        ))} */}
+    </div>
   )
 }
 

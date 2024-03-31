@@ -1,0 +1,20 @@
+footer{
+    padding: 3rem 10%;
+    background: black;
+
+    article{
+        font-size: 16px;
+        h2{
+            font-weight: bold;
+            color: white;
+        }
+        ul{
+            li{
+                margin-top: 1.5rem;
+                font-size: 14px;
+                color: #e9e3e3;
+                cursor: pointer;
+            }
+        }
+    }
+}

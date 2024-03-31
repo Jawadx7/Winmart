@@ -3,17 +3,19 @@ import { useState } from 'react'
 import Logo from '../../asserts/logo_sm.png'
 import food from '../../asserts/restaurant 2.png'
 // import { showNav, closeNav } from './actions'
+import { CiSearch } from "react-icons/ci";
+import { CiShoppingCart } from "react-icons/ci";
 
 const Header = () => {
 
-  const [navStatus, setNavStatus] = useState<string>("")
+  const [navStatus, setNavStatus] = useState<string>("closed")
 
   const showNav = () => {
     setNavStatus('opened')
   }
 
   const closeNav = () => {
-    setNavStatus('')
+    setNavStatus('closed')
   }
 
   return (
@@ -44,8 +46,18 @@ const Header = () => {
         </div>
       </div>
 
-{/* className={"nav" + (navStatus === 'opened' ? 'active' : '')} */}
-      <div className={"nav" + (navStatus === 'opened' ? 'active' : '')}>
+      <div className="nav">
+        <div className="closeBtn" onClick={() => closeNav()}>x</div>
+        <button className="btn mb-5">SIGN UP FREE</button>
+        <ul className='text-right'>
+          <li className='flex align-center justify-end'><span>Food App</span> <img src={food} alt="" className='w-10 h-10' /></li>
+          <li>Accessories</li>
+          <li>Laptops</li>
+          <li>Watch</li>
+        </ul>
+      </div>
+
+      <div id='nav2' className={(navStatus === 'opened' ? 'opened' : 'closed')}>
         <div className="closeBtn" onClick={() => closeNav()}>x</div>
         <button className="btn mb-5">SIGN UP FREE</button>
         <ul className='text-right'>

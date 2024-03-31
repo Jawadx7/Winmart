@@ -1,4 +1,4 @@
-import { item } from "./models"
+import { item } from "../../Data/models"
 import './Hero.scss'
 
 interface Props{

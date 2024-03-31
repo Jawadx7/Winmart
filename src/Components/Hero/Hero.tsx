@@ -1,21 +1,8 @@
 import './Hero.scss'
 import Header from '../Header/Header'
-import { useState } from 'react'
 import pic1 from '../../asserts/monica.png'
 
 const Hero = () => {
-  const [activeIndex, segtActiveIndex] = useState<number>(0)
-
-  // const updateIndex = (newIndex: number) => {
-  //   if(newIndex < 0){
-  //     newIndex = 0
-  //   }else if (newIndex > items.length){
-  //     newIndex = items.length - 1
-  //   }
-
-  //   segtActiveIndex(newIndex)
-  //   console.log(activeIndex)
-  // }
 
   return (
     <div className="hero">

@@ -14,6 +14,7 @@ import rect_blue from './asserts/Rect_blue.png'
 import appstore from './asserts/AppStore.png'
 import ad from './asserts/ads.png'
 import play from './asserts/GooglePlay.png'
+import { Featured } from './Data/Featured';
 
 const Payday = () => {
   return (
@@ -80,12 +81,13 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      <ProductsList title={"Trending Products"}/>
+      <ProductsList title={"Trending Products"} items={Featured}/>
 
       {/* PAYDAY */}
       <Payday />
 
-      <ProductsList title='Featured Products'/>
+      <ProductsList title='Featured Products' items={Featured}/>
+      <ProductsList title='Top Sales' items={Featured}/>
 
       <section className="payday2 bg-gray-200">
         <div className="payday_text">
@@ -105,6 +107,19 @@ const App: React.FC = () => {
       </section>
 
       <Stores />
+
+      {/* NEWSLETTER */}
+      <section className='newsletter bg-orange-500 flex align-center justify-center flex-col'>
+        <h2 className='text-white font-bold w-full sm:w-2/3'>join winmart community to get monthly promo</h2>
+        <p className='my-3 text-white font-bold'>Type your email down below and be wild for big promos</p>
+        <div className="bg-orange-400 p-2 sm:p-3 rounded-lg">
+          <div className="input bg-white p-2 rounded-lg flex align-center gap-2">
+            <input type="text" placeholder='Your Email' className='outline-0 border-0 h-full flex-2'/>
+            <button className="border-none outline-none py-2 px-3 sm:py-2 sm:px-5 bg-orange-500 text-white rounded-lg flex-1">Get Started</button>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

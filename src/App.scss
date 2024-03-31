@@ -51,7 +51,7 @@ section{
 
   .payday_img{
     img{
-      width: 30%;
+      width: 25%;
       position: absolute;
       bottom: 0;
     }
@@ -238,5 +238,14 @@ section{
         text-align: center;
       }
     }
+  }
+}
+
+.newsletter{
+  h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
   }
 }
