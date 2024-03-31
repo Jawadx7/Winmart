@@ -8,12 +8,12 @@
         align-items: center;
         justify-content: space-between;
         gap: 1rem;
-        flex-wrap: nowrap;
     
         .product_card{
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
             border-radius: 7px;
             width: 12rem;
+            background: white;
     
             .img{
                 width: 100%;
@@ -50,11 +50,21 @@
         padding: 2rem 5%;
     }
     @media screen and (max-width: 700px) {
-        padding: 2rem 10px 2rem 1rem;
+        padding: 2rem 0;
+
+        #title{
+            margin-left: 1rem;
+        }
 
         .product_list{
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px 0 10px 1.5rem;
+            justify-content: space-between;
+            gap: 1rem;
+
             .product_card{
-                margin-right: 1rem;
+                margin-right: 2rem;
             }
         }
     }

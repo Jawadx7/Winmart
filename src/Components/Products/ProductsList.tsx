@@ -2,6 +2,8 @@ import './Products.scss'
 // import ProductItem from './ProductItem'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+// import ButtonGroup from './ButtonGroup';
+
 
 interface Prop{
     title: string,
@@ -40,8 +42,11 @@ const ProductsList = ({title, items}: Prop) => {
   };
   return (
     <div className='products_container'>
-      <p className='mb-3'>{title}</p>
-      <Carousel swipeable={true} draggable={true} showDots={false} responsive={responsive} className='product_list'>
+      <p id="title" className='mb-3'>{title}</p>
+      <Carousel 
+      // customButtonGroup={<ButtonGroup />}
+      swipeable={true} draggable={true} showDots={false} 
+      responsive={responsive} className='product_list'>
       {
           items?.map((item) => (
             <div className="product_card" key={item.id}>
