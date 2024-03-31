@@ -1,9 +1,9 @@
-import './Footer.scss'
-import logo_lg from '../../asserts/logo.png'
+import "./Footer.scss";
+import logo_lg from "../../asserts/logo.png";
 
 const Footer = () => {
   return (
-    <footer className='grid grid-cols-1 sm:grid-cols-2 sm:gap-y-3 md:grid-cols-4 gap-3'>
+    <footer className="grid grid-cols-1 sm:grid-cols-2 sm:gap-y-3 md:grid-cols-4 gap-3">
       <article>
         <img src={logo_lg} alt="" />
         <ul>
@@ -34,7 +34,7 @@ const Footer = () => {
         </ul>
       </article>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

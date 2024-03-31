@@ -1,24 +1,23 @@
 import "./Products.scss";
-// import ProductItem from './ProductItem'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-// import ButtonGroup from './ButtonGroup';
+import { FaArrowRightLong } from "react-icons/fa6";
 
 interface Prop {
   title: string;
   items?: {
     id: number;
-    name: string;
-    price: number;
-    delivery: string;
+    name?: string;
+    price?: number;
+    delivery?: string;
     img: string;
+    title?: string;
   }[];
 }
 
 const ProductsList = ({ title, items }: Prop) => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 1024 },
       items: 4,
       slidesToSlide: 3,
@@ -45,7 +44,6 @@ const ProductsList = ({ title, items }: Prop) => {
         {title}
       </p>
       <Carousel
-        // customButtonGroup={<ButtonGroup />}
         swipeable={true}
         draggable={true}
         showDots={false}
@@ -58,14 +56,32 @@ const ProductsList = ({ title, items }: Prop) => {
               <img src={item.img} alt="" />
             </div>
             <div className="text">
-              <small>{item.name}</small>
-              <small>${item.price}</small>
-              <small>{item.delivery}</small>
-              <div className="flex align-center justify-between mt-3">
-                <button className="btn">Get Now</button>
-                <span>${item.price}</span>
-              </div>
+              {item.name ? <small>{item.name}</small> : ""}
+              {item.price ? <small>{item.price}</small> : ""}
+              {item.delivery ? <small>{item.delivery}</small> : ""}
+              {item.name ? (
+                <div className="flex align-center justify-between mt-3">
+                  <button className="btn">Get Now</button>
+                  <span>${item.price}</span>
+                </div>
+              ) : (
+                ""
+              )}
             </div>
+
+            {item.name ? (
+              ""
+            ) : (
+              <div className="p-2 px-3 flex align-center justify-between">
+                <div className="flex align-start flex-col">
+                  <span>{item.title}</span>
+                  <small className="text-gray-500 my-2 cursor-pointer">
+                    Buy Now
+                  </small>
+                </div>
+                <FaArrowRightLong className="cursor-pointer" />
+              </div>
+            )}
           </div>
         ))}
       </Carousel>

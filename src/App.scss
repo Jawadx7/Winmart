@@ -248,4 +248,13 @@ section{
     font-weight: bold;
     text-align: center;
   }
+
+  @media screen and (max-width: 400px){
+    padding: 1rem 10px;
+    .input{
+      button{
+        font-size: 15px;
+      }
+    }
+  }
 }
